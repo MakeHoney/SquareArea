@@ -20,7 +20,7 @@ int bigXPos(Rec*);
 int smallXPos(Rec*);
 int bigYPos(Rec*);
 int smallYPos(Rec*);
-int Test(Rec*, Rec*);
+int testResult(Rec*, Rec*);
 
 
 
@@ -28,14 +28,14 @@ int Test(Rec*, Rec*);
 
 int main() {
 	int pos[8];
-	int i, j;
+	int i, j = 0;
 	Ptr* ptr[4];
 	Rec* rec[2];
 
 	for (i = 0; i < 4; i++) {
 		for (j = 0; j < 2; j++)
 			scanf("%d", &pos[j]);
-		j = 1;
+		j--;
 		ptr[i] = ptrInit(pos[j - 1], pos[j]);
 	}
 
